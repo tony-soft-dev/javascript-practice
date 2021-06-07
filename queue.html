@@ -1,0 +1,40 @@
+!<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+	class MyQueue {
+		constructor(queue) {
+			this.queue = queue;
+		}
+		// adds new item the end of the queue
+		add(newItem) {
+			this.queue = [...this.queue, newItem]
+		}
+		// removes an item from the end of the queue
+		remove() {
+			this.queue.splice(0, 1);
+		}
+		// returns the first item of the array
+		peek() {
+			return this.queue ? this.queue[0] : null;
+		}
+		// checks if queue is empty
+		isEmpty() {
+			return this.queue ? false : true;
+		}
+	}
+
+	newQueue = new MyQueue(["one", "two", "three", "four"]);
+		// newQueue = new MyQueue();
+
+	// newQueue.add("five")
+	console.log(newQueue.peek())
+	console.log(newQueue.queue)
+</script>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
