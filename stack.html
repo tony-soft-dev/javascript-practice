@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<script type="text/javascript">
+
+	class MyStack {
+		constructor(arr) {
+			this.arr = arr;
+		}
+		// remove the last item from the stack
+		pop() {
+			this.arr !== null ? this.arr.splice(this.arr.length - 1, 1) : null
+		}
+		// add an item to the top of the stack
+		push(item) {
+			this.arr = [...this.arr, item]
+		}
+		// retreive the last item of the stack
+		peek() {
+			if (this.arr.length > 0) {
+				return this.arr[this.arr.length - 1]
+			}
+		}
+		// check if stack is empty
+		isEmpty() {
+			return this.arr ? false : true;
+		}
+	}
+
+	// testing code
+	newStack = new MyStack(["one", "two", "three", "four"]);
+	console.log(newStack.isEmpty())
+	
+</script>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+
+</body>
+</html>
